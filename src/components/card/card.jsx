@@ -5,12 +5,10 @@ import { DELETE_USER, EDIT_USER } from "./todo";
 export const CardWrapper = () => {
   const { data, dispatch } = useContext(TodoProviderWrapper);
 
-  // Delete function for users
   const deleteItem = (id) => {
     dispatch({ type: DELETE_USER, id });
   };
 
-  // Edit function (this could trigger a modal or some UI for editing)
   const editItem = (id, value) => {
     dispatch({ type: EDIT_USER, id, value });
   };
@@ -21,7 +19,7 @@ export const CardWrapper = () => {
         <div key={item.id}>
           <h1>{item.user_name} {item.last_name}</h1>
           <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-            {/* Delete Button */}
+           
             <button
               style={{
                 padding: "10px 20px",
@@ -34,7 +32,6 @@ export const CardWrapper = () => {
               Delete
             </button>
 
-            {/* Edit Button (you can link this to the edit logic/modal or UI) */}
             <button
               style={{
                 padding: "10px 20px",

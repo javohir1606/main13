@@ -16,6 +16,7 @@ export const todoReducer = (state, action) => {
       return { ...state, users: newUsers };
     default:
       return state;
+      
   }
 };
 
